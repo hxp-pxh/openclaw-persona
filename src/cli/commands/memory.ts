@@ -6,7 +6,11 @@
 import { spawn } from 'child_process';
 import * as path from 'path';
 import * as fs from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const VAULT_SCRIPT = path.join(__dirname, '../../../memory-vault/vault.py');
 
 export async function extract(input?: string): Promise<void> {

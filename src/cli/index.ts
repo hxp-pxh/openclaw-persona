@@ -74,7 +74,7 @@ async function main() {
     case '-h':
     default:
       console.log(`
-🦞 openclaw-persona v0.2.9
+🦞 openclaw-persona v0.3.0
 
 Commands:
   init [dir]              Initialize persona workspace

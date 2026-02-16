@@ -1,6 +1,6 @@
 {
   "name": "openclaw-persona",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "type": "module",
   "description": "Personality and memory layer for OpenClaw - gives your AI assistant continuity, identity, and growth",
   "main": "dist/index.js",
