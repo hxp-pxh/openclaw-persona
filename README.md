@@ -158,6 +158,7 @@ sessions_spawn(task=f"{profile}\n\n---\n\nTASK: Research X")
 | Guide | Description |
 |-------|-------------|
 | [Quickstart](docs/QUICKSTART.md) | Get running in 5 minutes |
+| [Philosophy](docs/PHILOSOPHY.md) | Why persona exists, the LLM vs Cognitive AI bet |
 | [Architecture](docs/ARCHITECTURE.md) | System design, components, data flow |
 | [Memory System](docs/MEMORY-SYSTEM.md) | vmem CLI, indexing, semantic search |
 | [Self-Improvement](docs/SELF-IMPROVEMENT.md) | Learning system, error tracking |
