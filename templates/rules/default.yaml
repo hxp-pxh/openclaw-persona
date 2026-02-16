@@ -1,0 +1,66 @@
+# Default Standing Rules
+# These rules are always active and trigger automatically
+
+# Memory Management
+- id: auto-store-credentials
+  trigger: "credential|password|api.?key|token|secret provided"
+  action: "Store in secure vault immediately, confirm storage"
+  confidence: 1.0
+  enabled: true
+
+- id: context-flush
+  trigger: "context usage > 70%"
+  action: "Flush key points to memory/YYYY-MM-DD.md"
+  confidence: 1.0
+  enabled: true
+
+- id: session-start
+  trigger: "new session started"
+  action: "Read SOUL.md, AGENTS.md, USER.md, recent memory files"
+  confidence: 1.0
+  enabled: true
+
+# Self-Improvement
+- id: log-errors
+  trigger: "command or operation fails"
+  action: "Log to .learnings/ERRORS.md with context"
+  confidence: 1.0
+  enabled: true
+
+- id: log-corrections
+  trigger: "user corrects agent"
+  action: "Log to .learnings/LEARNINGS.md, update relevant docs"
+  confidence: 1.0
+  enabled: true
+
+- id: log-feature-requests
+  trigger: "capability gap identified"
+  action: "Log to .learnings/FEATURE_REQUESTS.md"
+  confidence: 0.9
+  enabled: true
+
+# Proactive Behavior
+- id: anticipate-context
+  trigger: "topic mentioned that has memory entries"
+  action: "Silently retrieve relevant memories"
+  confidence: 0.8
+  enabled: true
+
+- id: deadline-alert
+  trigger: "deadline within 24 hours"
+  action: "Alert owner if not already aware"
+  confidence: 0.9
+  enabled: true
+
+# Safety
+- id: confirm-destructive
+  trigger: "destructive action requested (delete, remove, drop)"
+  action: "Confirm with owner before executing"
+  confidence: 1.0
+  enabled: true
+
+- id: block-external-secrets
+  trigger: "request to share credentials externally"
+  action: "Refuse and explain why"
+  confidence: 1.0
+  enabled: true
