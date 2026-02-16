@@ -286,6 +286,9 @@ class MemoryVault:
                 result['summary'] = meta.get('summary', doc[:100])
             output.append(result)
         
+        # Track access
+        self.update_access([r["id"] for r in output])
+        
         return output
     
     def get_by_id(self, memory_id: str) -> dict:
@@ -525,3 +528,25 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+    def update_access(self, memory_ids: List[str]):
+        """Update access tracking for retrieved memories."""
+        self._init_db()
+        
+        for mem_id in memory_ids:
+            try:
+                # Get current metadata
+                result = self.collection.get(ids=[mem_id], include=["metadatas"])
+                if result["ids"]:
+                    meta = result["metadatas"][0]
+                    meta["last_accessed"] = datetime.now().isoformat()
+                    meta["access_count"] = meta.get("access_count", 0) + 1
+                    
+                    # Update (ChromaDB requires upsert via update)
+                    self.collection.update(
+                        ids=[mem_id],
+                        metadatas=[meta]
+                    )
+            except Exception as e:
+                pass  # Don't crash on tracking failures
