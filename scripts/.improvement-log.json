@@ -1,0 +1,25 @@
+{
+  "analyses": [
+    {
+      "timestamp": "2026-02-16T05:50:18.006395",
+      "errors": {
+        "total": 3,
+        "patterns": {
+          "timeouts": 1,
+          "rate_limits": 2
+        }
+      },
+      "corrections": {
+        "total": 1,
+        "categories": {
+          "explicit_correction": 1
+        }
+      },
+      "memory_gaps": {
+        "gaps": []
+      }
+    }
+  ],
+  "proposals": [],
+  "applied": []
+}
