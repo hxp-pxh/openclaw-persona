@@ -30,3 +30,5 @@ coverage/
 # npm
 *.tgz
 package-lock.json
+scripts/.improvement-log.json
+scripts/.watcher-state.json
