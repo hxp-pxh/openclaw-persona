@@ -9,6 +9,7 @@ import { vmem } from './commands/vmem.js';
 import { update } from './commands/update.js';
 import { status } from './commands/status.js';
 import { extract, consolidate, prune, stats as memoryStats } from './commands/memory.js';
+import { onboard } from './commands/onboard.js';
 
 const args = process.argv.slice(2);
 const command = args[0];
@@ -32,6 +33,10 @@ async function main() {
       
     case 'status':
       await status();
+      break;
+      
+    case 'onboard':
+      await onboard();
       break;
     
     // Memory lifecycle commands
@@ -69,12 +74,13 @@ async function main() {
     case '-h':
     default:
       console.log(`
-🦞 openclaw-persona v0.2.0
+🦞 openclaw-persona v0.2.9
 
 Commands:
   init [dir]              Initialize persona workspace
   status                  Show workspace status
   update                  Update templates to latest
+  onboard                 Print the USER.md onboarding interview prompt
   vmem <cmd>              Vector memory (query/add/index/consolidate/delete)
   memory <cmd>            Memory lifecycle (extract/consolidate/prune/stats)
 
@@ -85,6 +91,7 @@ Memory Lifecycle:
 
 Examples:
   persona init ~/my-agent
+  persona onboard                 # Get the interview prompt to build USER.md
   persona vmem query "user preferences"
   persona memory consolidate 0.9
 `);

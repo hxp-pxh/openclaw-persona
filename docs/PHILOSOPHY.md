@@ -91,6 +91,41 @@ Lobsters molt. They shed their shell periodically, emerging larger each time. Th
 
 That's what persona enables: an AI that can molt, shed old patterns, and grow.
 
+## Prior Art: ResonantOS
+
+We're not alone. [ResonantOS](https://resonantos.com/) by Manolo Remiddi is building something remarkably similar—also a layer on top of OpenClaw (not a fork).
+
+**Comparison:**
+
+| Concept | ResonantOS | Persona |
+|---------|------------|---------|
+| **Positioning** | OS layer on OpenClaw | Addon layer on OpenClaw |
+| **Memory** | "Creative DNA" + compression | Vector vault + decay-based pruning |
+| **Security** | "Shield" (permission validation) | Security-aware prompts |
+| **Rules** | "Logician" (policy enforcement) | Standing rules, decision trees |
+| **Self-healing** | "Guardian" (auto-recovery) | Self-improvement engine |
+| **Identity** | "Resonant DNA" (structured interview) | SOUL.md + USER.md |
+| **Philosophy** | "Augmentatism" + "Cosmodestiny" | Cognitive scaffolding thesis |
+| **Distribution** | macOS installer, DAO tokens | npm package, CLI-first |
+
+**ResonantOS's Four First Principles:**
+1. **Mandatory Critical Inquiry** — Question before answering
+2. **State & Context Integrity** — Always reference knowledge base
+3. **Resource-Driven Collaboration** — User's time is sacred
+4. **Systemic Evolution via Error** — Failures are data for improvement
+
+These map well to our own patterns but are more explicitly codified. Worth considering adopting this "constitutional" framing.
+
+**Key insight from ResonantOS:** Their "Resonant DNA Architecture Protocol" is a structured onboarding interview that builds the user profile. We have USER.md but no guided process to create it. This is worth adding.
+
+**Divergences:**
+- ResonantOS is product-focused (macOS installer, marketplace, DAO governance)
+- Persona is developer-focused (npm package, templates, API hooks)
+- ResonantOS targets "creative professionals"
+- Persona targets anyone wanting AI continuity
+
+We can learn from each other. Open source wins when the tide rises.
+
 ---
 
 *"Vanilla OpenClaw is a tool. With persona, it becomes a partner that knows you and grows with you."*
