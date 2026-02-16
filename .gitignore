@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Memory vault data (user-specific)
+memory-vault/chroma_db/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+coverage/
+.nyc_output/
+
+# npm
+*.tgz
+package-lock.json
